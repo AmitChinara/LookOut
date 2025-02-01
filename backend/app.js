@@ -1,5 +1,6 @@
 // Import the express module
 const express = require('express');
+const cors = require("cors");
 const PATHS = require('./routes/paths');
 const http = require('http');
 const router = require('./routers/router');
@@ -8,12 +9,24 @@ const WebSocket = require('ws');
 
 // Created a connection with mongodb
 const connectDB = require('./db/db')
-const {fetchAllStatusWS} = require("./controllers/statusController");
+const { fetchAllStatusWS } = require("./controllers/statusController");
 const {addClient} = require("./services/WebSocketService");
 connectDB();
 
 // Create an instance of the express application
 const app = express();
+
+// Allow all origins (for development)
+app.use(cors());
+
+// OR: Allow specific origin (recommended for production)
+app.use(
+    cors({
+        origin: "http://localhost:5173", // Allow only frontend URL
+        methods: "GET,POST,PUT,DELETE,OPTIONS",
+        allowedHeaders: "Content-Type,Authorization",
+    })
+);
 
 // Create HTTP server and integrate with WebSocket server
 const server = http.createServer(app);

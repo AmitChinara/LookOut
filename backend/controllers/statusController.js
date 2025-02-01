@@ -18,7 +18,7 @@ const deleteStatus = async (req, res) => {
 // WebSocket function (DO NOT use req, res)
 const fetchAllStatusWS = async (ws) => {
     try {
-        let response = await statusServices.fetchAllStatus(ws);
+        let response = await statusServices.fetchAllStatus();
         ws.send(JSON.stringify({ event: "INITIAL_LOAD", status: response.status, data: response.data }));
     } catch (error) {
         ws.send(JSON.stringify({ event: "INITIAL_LOAD", status: 500, error: 'Internal Server Error' }));

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@clerk/clerk-react": "^5.22.10",
+    "shadcn": "^2.3.0"
+  }
+}

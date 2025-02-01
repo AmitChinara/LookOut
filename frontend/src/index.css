@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb; /* Light background for the page */
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Style for the Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+h2 {
+  font-size: 2rem;
+  color: #4a4a4a;
+  font-weight: 600;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+select,
+button {
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db; /* Light grey border */
+  outline: none;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  border-color: #4b6cb7; /* Border color on focus */
+  box-shadow: 0 0 5px rgba(75, 108, 183, 0.4); /* Subtle shadow effect */
+}
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4b6cb7; /* Hover effect */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+table th {
+  background-color: #f3f4f6;
+  color: #4a4a4a;
+  font-weight: 500;
+}
+
+table td {
+  background-color: white;
+  color: #555;
+}
+
+/* Zebra Stripe Effect for Table */
+table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Status Dropdown */
+select {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Active Status Styles */
+select:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+}
+
+/* Radio Button */
+input[type="radio"] {
+  cursor: pointer;
+}
+
+/* Error and Success Messages */
+.message {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.success {
+  background-color: #d1fad1; /* Light green for success */
+  color: #387c3e;
+}
+
+.error {
+  background-color: #fcd7d7; /* Light red for error */
+  color: #e53e3e;
+}
+
+/* Animation for the form on load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.form-container {
+  animation: fadeIn 0.5s ease-in;
+}
