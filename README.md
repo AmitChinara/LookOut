@@ -24,14 +24,52 @@ This is a web application for managing and updating the statuses of various serv
 
 ## Installation
 
-To get started with this project locally, follow the steps below:
+To install LookOut, follow these steps:
 
-### 1. Clone the repository
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/AmitChinara/LookOut.git
+    cd LookOut
+    ```
 
-```bash
-git clone https://github.com/AmitChinara/LookOut.git
-cd LookOut
-```
+2. Navigate to the frontend directory and install dependencies:
+    ```sh
+    cd frontend
+    npm install
+    # or
+    yarn install
+    ```
+
+3. Navigate to the backend directory and install dependencies:
+    ```sh
+    cd ../backend
+    npm install
+    # or
+    yarn install
+    ```
+
+## Usage
+
+To run the application locally, follow these steps:
+
+1. Start the backend server:
+    ```sh
+    cd backend
+    npm start
+    # or
+    yarn start
+    ```
+
+2. Start the frontend development server:
+    ```sh
+    cd ../frontend
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+3. Open your browser and navigate to `http://localhost:5173/` to see the application in action.
+
 ## How It Works
 
 The **Status Management Application** is designed to manage service statuses in real-time with both WebSocket and RESTful communication. Here’s an overview of how the key components interact:
