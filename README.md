@@ -138,3 +138,5 @@ The **Status Management Application** is designed to manage service statuses in 
 
 This system ensures that service statuses can be easily monitored and updated in real-time, with clear separation between the actions available to admins and regular users.
 
+
+#HOSTED LINK: https://lookout-frontend-5vfs.onrender.com/
